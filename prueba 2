@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plan PISE - Instituto Comercial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F2F3F5;
+            color: #00447A;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2E7D32, #1565C0); /* verde + azul */
+            color: #FFFFFF;
+            padding: 80px 20px 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #F2F3F5;
+            clip-path: ellipse(75% 100% at 50% 0); /* curva */
+        }
+
+        .caja-pise {
+            background-color: #FFFFFF;
+            border-left: 10px solid #2E7D32;
+            padding: 20px;
+            margin: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .caja-protocolos {
+            background-color: #1565C0;
+            border-left: 10px solid #2E7D32;
+            padding: 20px;
+            margin: 30px 20px;
+            border-radius: 12px;
+            color: #FFFFFF;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .caja-protocolos a {
+            color: #FFFFFF;
+            cursor: pointer;
+            display: block;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        .contenido-protocolo {
+            display: none;
+            background-color: #FFFFFF;
+            color: #00447A;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2E7D32, #1565C0);
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenidos al Instituto Superior de Comercio <br> Alberto Blest Gana</h1>
+        <h3>Instituto Comercial Bicentenario de Viña del Mar</h3>
+        <p>Súmate a miles de jóvenes que han escogido crecer profesionalmente junto a nosotros.</p>
+    </header>
+
+    <div class="caja-pise">
+        <h3>¿Qué es el Plan Integral de Seguridad Escolar (PISE)?</h3>
+        <p>Es prevención. Crea la autoconciencia de prevención en diversas emergencias.</p>
+        <p>La cual busca crear diferentes estándares o protocolos que resguarden la seguridad de los alumnos de nuestro establecimiento.</p>
+        <p>Si quieres más información haz click en el siguiente link:</p>
+        <a href="https://convivenciaparaciudadania.mineduc.cl/wp-content/uploads/2025/05/Plan-Integral-de-Seguridad-Educativa-PISE-2025-2.pdf" target="_blank">
+            <h6>PLAN INTEGRAL DE SEGURIDAD EDUCATIVA (PISE)</h6>
+        </a>
+    </div>
+
+    <div class="caja-protocolos">
+        <h3>Ahora bien, tenemos los siguientes protocolos:</h3>
+
+        <a onclick="mostrarProtocolo('incendios')">🔥 Incendios</a>
+        <div id="incendios" class="contenido-protocolo">
+            <ul>
+                <li>Profesor/a jefe o inspector activa la alarma y lidera la evacuación.</li>
+                <li>Estudiantes salen en fila, dejando mochilas y objetos.</li>
+                <li>Encargados de curso verifican que nadie quede en salas o baños.</li>
+                <li>Profesores llevan lista para control de asistencia en zona segura.</li>
+                <li>Personal de servicios corta electricidad y gas.</li>
+                <li>Bomberos se contactan desde secretaría o inspectoría general.</li>
+            </ul>
+        </div>
+
+        <a onclick="mostrarProtocolo('accidentes')">🩹 Accidentes</a>
+        <div id="accidentes" class="contenido-protocolo">
+            <ul>
+                <li>Profesor/a o inspector aplica primeros auxilios básicos (según capacitación).</li>
+                <li>Se traslada al estudiante a enfermería o sala de primeros auxilios.</li>
+                <li>Se informa a apoderado inmediatamente.</li>
+                <li>Si es grave → se activa el seguro escolar y se llama a ambulancia.</li>
+                <li>Equipo de convivencia brinda contención emocional a testigos.</li>
+            </ul>
+        </div>
+
+        <a onclick="mostrarProtocolo('sismos')">🌎 Sismos</a>
+        <div id="sismos" class="contenido-protocolo">
+            <ul>
+                <li>Al sonar o sentirse el sismo: estudiantes se protegen bajo mesas.</li>
+                <li>Una vez seguro, se inicia evacuación ordenada a zona segura.</li>
+                <li>Profesores mantienen calma y disciplina en su grupo.</li>
+                <li>Inspectoría controla las rutas de evacuación.</li>
+                <li>Dirección comunica situación a apoderados y autoridades si es necesario.</li>
+            </ul>
+        </div>
+
+        <a onclick="mostrarProtocolo('fallas')">⚡ Fallas eléctricas</a>
+        <div id="fallas" class="contenido-protocolo">
+            <ul>
+                <li>Encargado de servicios corta energía en tablero general.</li>
+                <li>Profesores suspenden uso de proyectores, computadores, laboratorios.</li>
+                <li>Estudiantes permanecen en sala hasta que se indique lo contrario.</li>
+                <li>Si la falla genera riesgo (chispas, humo) → evacuar al patio.</li>
+            </ul>
+        </div>
+
+        <a onclick="mostrarProtocolo('fugas')">💨 Fugas de gas</a>
+        <div id="fugas" class="contenido-protocolo">
+            <ul>
+                <li>Encargado corta suministro central.</li>
+                <li>Profesores ordenan evacuación rápida y sin uso de interruptores eléctricos.</li>
+                <li>No se permite encender celulares ni fuego en el trayecto.</li>
+                <li>Secretaría da aviso a bomberos y mantiene comunicación con dirección.</li>
+            </ul>
+        </div>
+
+        <a onclick="mostrarProtocolo('desfibrilador')">❤️ Uso de desfibrilador</a>
+        <div id="desfibrilador" class="contenido-protocolo">
+            <ul>
+                <li>El liceo debe tener un DEA en un lugar visible y accesible.</li>
+                <li>Alumnos designados como brigadistas escolares pueden apoyar trayendo el DEA.</li>
+                <li>Personal capacitado lo utiliza siguiendo la cadena de supervivencia.</li>
+                <li>Mientras llega el DEA, un adulto inicia RCP.</li>
+                <li>Se activa contacto con SAMU (131) inmediatamente.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <h6>Hecho por: 4° medio E</h6>
+        <h5>Número de los funcionarios:</h5>
+        <a href="#"><h6>+56 9 xxxx xxxx</h6></a>
+        <a href="#"><h6>+56 9 xxxx xxxx</h6></a>
+        <a href="#"><h6>+56 9 xxxx xxxx</h6></a>
+    </footer>
+
+    <script>
+        function mostrarProtocolo(id) {
+            let protocolos = document.querySelectorAll(".contenido-protocolo");
+            protocolos.forEach(p => p.style.display = "none");
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
