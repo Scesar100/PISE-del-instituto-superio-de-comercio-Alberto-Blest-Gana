@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PISE - Plan Integral de Seguridad Escolar</title>
+    <style>
+        /* ============================
+           PALETA DE COLORES
+           ============================
+           Azul oscuro: #00447A
+           Verde:       #83B81A
+           Celeste:     #7BDCFF
+           Verde claro: #73BA00
+           Gris fondo:  #F2F3F5
+           Blanco:      #FFFFFF
+           ============================ */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #F2F3F5;
+            color: #00447A;
+        }
+
+        .header {
+            background-image: url('https://insucoabg.cl/wp-content/uploads/2025/05/foto-tit-contacto.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 68, 122, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .header .contact-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #FFFFFF;
+            color: #00447A;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-size: 0.9em;
+            z-index: 3;
+        }
+
+        .header h1 {
+            color: #FFFFFF;
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        .header p {
+            color: #FFFFFF;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #FFFFFF;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .intro .title-icon {
+            background-color: #83B81A;
+            color: #FFFFFF;
+            font-size: 2.5em;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            border: 4px solid #73BA00;
+        }
+
+        .intro h2 {
+            color: #83B81A;
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .card-icon {
+            background-color: #F2F3F5;
+            color: #00447A;
+            font-size: 2.5em;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        
+        .card h3 {
+            color: #00447A;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .steps {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .steps li {
+            background-color: #F2F3F5;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #00447A;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="overlay">
+            <h1>Plan Integral de Seguridad Escolar (PISE)</h1>
+            <p>Información y protocolos de emergencia dentro del colegio</p>
+        </div>
+        <div class="contact-btn">Contacto</div>
+    </header>
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro">
+        <div class="title-container">
+            <div class="title-icon">i</div>
+            <h2>¿Qué es el PISE?</h2>
+        </div>
+        <p>
+            El Plan Integral de Seguridad Escolar es la herramienta de gestión de riesgos que 
+            articula medidas y protocolos destinados a resguardar la seguridad de toda la 
+            comunidad educativa, aportando de manera sustantiva al desarrollo de una cultura 
+            nacional inclusiva de autocuidado y prevención de riesgos. 
+        </p>
+        <p>
+            Tiene por propósito reforzar las condiciones de seguridad a través de una metodología 
+            de trabajo permanente, en cada establecimiento educacional. Aquí encontrarás los 
+            pasos a seguir en caso de emergencias escolares.
+        </p>
+    </section>
+
+    <!-- ================= GRID DE EMERGENCIAS ================= -->
+    <section class="grid">
+        <!-- Incendios -->
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Incendios</h3>
+            <p><strong>Identificación:</strong> Situaciones donde el fuego representa un riesgo directo.</p>
+            <ul class="steps">
+                <li>Profesor/a jefe o inspector activa la alarma y lidera la evacuación.</li>
+                <li>Estudiantes salen en fila, dejando mochilas y objetos.</li>
+                <li>Encargados de curso verifican que nadie se quede en salas o baños.</li>
+                <li>Profesores llevan lista para control de asistencia en zona segura.</li>
+                <li>Personal de servicios corta electricidad y gas.</li>
+                <li>Bomberos se contactan desde secretaría o inspectoría general.</li>
+            </ul>
+        </div>
+
+        <!-- Accidentes -->
+        <div class="card">
+            <div class="card-icon">🤕</div>
+            <h3>Accidentes</h3>
+            <p><strong>Identificación:</strong> Situaciones de lesiones o daños físicos dentro del colegio.</p>
+            <ul class="steps">
+                <li>Profesor/a o inspector aplica primeros auxilios básicos (Personal capacitado).</li>
+                <li>Se traslada al estudiante a enfermería.</li>
+                <li>Se informa a apoderado inmediatamente.</li>
+                <li>Si es grave → se activa el seguro escolar y se llama a ambulancia.</li>
+                <li>Equipo de convivencia brinda contención emocional a testigos.</li>
+            </ul>
+        </div>
+
+        <!-- Sismos -->
+        <div class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Sismos</h3>
+            <p><strong>Identificación:</strong> Movimientos telúricos que pueden poner en riesgo a la comunidad.</p>
+            <ul class="steps">
+                <li>Al sonar o sentirse el sismo: Los estudiantes se deben protegen bajo mesas, alejados de ventanas.</li>
+                <li>Una vez seguro, se inicia evacuación ordenada a zona segura.</li>
+                <li>Los profesores mantienen la calma y disciplina en su grupo.</li>
+                <li>Inspectoría controla las rutas de evacuación.</li>
+                <li>Dirección comunica situación a apoderados y autoridades si es necesario.</li>
+            </ul>
+        </div>
+
+        <!-- Fallas eléctricas -->
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Fallas eléctricas</h3>
+            <p><strong>Identificación:</strong> Cortes de energía o desperfectos eléctricos dentro del establecimiento.</p>
+            <ul class="steps">
+                <li>Encargado de servicios corta energía en tablero general.</li>
+                <li>Profesores suspenden uso de proyectores, computadores, laboratorios.</li>
+                <li>Los estudiantes permanecen en sala hasta que se indique lo contrario.</li>
+                <li>Si la falla genera riesgo (chispas, humo) → evacuar al patio.</li>
+            </ul>
+        </div>
+
+        <!-- Fugas de gas -->
+        <div class="card">
+            <div class="card-icon">💨</div>
+            <h3>Fugas de gas</h3>
+            <p><strong>Identificación:</strong> Escape de gas que pueda afectar la seguridad de estudiantes y personal.</p>
+            <ul class="steps">
+                <li>Encargado corta suministro central.</li>
+                <li>Profesores ordenan evacuación rápida y sin uso de interruptores eléctricos.</li>
+                <li>No se permite encender celulares ni fuego en el trayecto.</li>
+                <li>Secretaría da aviso a bomberos y mantiene comunicación con dirección.</li>
+            </ul>
+        </div>
+
+        <!-- Uso de desfibrilador -->
+        <div class="card">
+            <div class="card-icon">❤️</div>
+            <h3>Uso de desfibrilador</h3>
+            <p><strong>Identificación:</strong> Emergencia cardíaca que requiere el uso inmediato de un DEA.</p>
+            <ul class="steps">
+                <li>El liceo debe tener un DEA en un lugar visible y accesible (ej: inspectoría).</li>
+                <li>Alumnos designados como brigadistas escolares pueden apoyar trayendo el DEA.
+                <li>Personal capacitado (profesores, asistentes, inspectoría) lo utiliza siguiendo la cadena de supervivencia.</li>
+                <li>Mientras llega el DEA, un adulto inicia RCP.</li>
+                <li>Se activa contacto con SAMU (131) inmediatamente.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2025 Instituto Superior de Comercio Alberto Blest Gana - PISE</p>
+    </footer>
+</body>
+</html>
